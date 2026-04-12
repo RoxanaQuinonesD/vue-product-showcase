@@ -5,20 +5,34 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "axios": "^1.15.0",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "vue": "^3.2.13",
+    "vuex": "^4.0.2",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-unit-jest": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/vue3-jest": "27.0.0-alpha.3",
+    "babel-jest": "27.5.1",
+    "cypress": "^15.4.0",
     "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3"
+    "eslint-plugin-vue": "^8.0.3",
+    "jest": "27.5.1",
+    "jest-environment-jsdom": "27.5.1",
+    "vue-cli-plugin-vuetify": "~2.5.8",
+    "vuetify": "^3.10.5"
   },
   "eslintConfig": {
     "root": true,
@@ -32,7 +46,24 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {},
+    "overrides": [
+      {
+        "files": [
+          "cypress/**/*.js"
+        ],
+        "env": {
+          "mocha": true,
+          "browser": true
+        },
+        "globals": {
+          "cy": "readonly",
+          "Cypress": "readonly",
+          "expect": "readonly",
+          "assert": "readonly"
+        }
+      }
+    ]
   },
   "browserslist": [
     "> 1%",
