@@ -113,17 +113,10 @@ Este proyecto es ideal para mostrar en tu portafolio como ejemplo de:
 
 
 
-# ENTREGA DEL TRABAJO #
 
-La Aplicación SPA desarrollada con Vue para mostrar un catálogo interactivo de productos. Este proyecto tiene como objetivo construir una interfaz moderna, dinámica y escalable, utilizando componentes reutilizables y una estructura preparada para integrar API, Vuex, pruebas y librerías UI.
+# Vue Product Showcase - Proyecto Módulo 7
 
-## Desarrollo por lecciones
-
-### Lección 1: Componentes y ciclo de vida
-
-En esta primera etapa configuré el proyecto con Vue CLI y construí la estructura base de la aplicación. Creé los componentes `Header`, `Footer`, `ProductList` y `ProductCard`, organizando la interfaz de forma modular y reutilizable.
-
-Además, utilicé el ciclo de vida `mounted()` en `ProductList` para cargar productos de prueba y mostrarlos dinámicamente en pantalla. Con esto dejé preparada la base visual y funcional para continuar con las siguientes etapas del proyecto.
+Aplicación SPA desarrollada con Vue para mostrar un catálogo interactivo de productos. Este proyecto tiene como objetivo construir una interfaz moderna, dinámica y escalable, utilizando componentes reutilizables y una estructura preparada para integrar API, Vuex, pruebas y librerías UI.
 
 ## Instalación y ejecución
 
@@ -133,19 +126,19 @@ Una vez iniciado el servidor, abrí la dirección local entregada por Vue en el 
 
 `http://localhost:8080/`
 
-## Estado actual del proyecto
+## Desarrollo por lecciones
 
-Actualmente, el proyecto cuenta con la estructura base de una SPA en Vue. Ya configuré el entorno de trabajo, creé los componentes principales y logré visualizar en pantalla un encabezado, un pie de página y un listado de productos de prueba mediante tarjetas reutilizables.
+### Lección 1: Componentes y ciclo de vida
 
-En esta etapa también utilicé el ciclo de vida `mounted()` para cargar información de ejemplo, dejando preparada la base para continuar con el consumo de API, la gestión de estado con Vuex, las pruebas y la integración de una librería UI.
+En esta primera etapa configuré el proyecto con Vue CLI y construí la estructura base de la aplicación. Creé los componentes `Header`, `Footer`, `ProductList` y `ProductCard`, organizando la interfaz de forma modular y reutilizable.
 
+Además, utilicé el ciclo de vida `mounted()` en `ProductList` para cargar productos de prueba y mostrarlos dinámicamente en pantalla. Con esto dejé preparada la base visual y funcional para continuar con las siguientes etapas del proyecto.
 
 ### Lección 2: Consumo de datos desde una API
 
 En esta etapa integré Axios para consumir productos desde una API pública y mostrar la información de forma dinámica en la aplicación. Reemplacé los datos de prueba de la lección anterior por productos reales, incorporando imagen, título, precio y categoría.
 
 Además, agregué estados de carga, error y lista vacía para mejorar la experiencia de uso, y construí un filtro simple por categoría que permite visualizar los productos según la selección realizada.
-
 
 ### Lección 3: Almacenamiento de estado en Vuex
 
@@ -155,12 +148,18 @@ Además, moví el consumo de la API al módulo de productos mediante una acción
 
 También incorporé un módulo de favoritos y lo conecté a la interfaz mediante un ícono de corazón en cada producto, permitiendo guardar productos destacados y visualizarlos en una sección separada dentro de la aplicación.
 
-
 ### Lección 4: Pruebas en Vue
 
 En esta etapa configuré el entorno de pruebas unitarias con Jest y Vue Test Utils. A partir de eso, desarrollé pruebas para verificar el renderizado correcto del componente `ProductCard` y la respuesta visual de `ProductList` cuando ocurre un error en la carga de productos.
 
-Con esto pude validar parte del comportamiento clave de la interfaz y dejar una base inicial para asegurar la calidad de la aplicación.
-
 También incorporé una prueba end-to-end con Cypress para validar el flujo de filtrado por categoría, comprobando que un usuario pueda interactuar con la aplicación y ver resultados en pantalla.
 
+### Lección 5: Librerías y frameworks complementarios
+
+En esta etapa integré Vuetify como librería UI para mejorar la presentación visual de la aplicación. Apliqué componentes de la librería en la interfaz, especialmente en el filtro de categorías, con el objetivo de lograr una experiencia más clara, moderna y consistente.
+
+Además, ajusté la disposición visual de los productos y favoritos para mantener una estructura ordenada y responsive, dejando la aplicación con una apariencia más profesional y alineada con un entorno real de e-commerce.
+
+## Estado actual del proyecto
+
+Actualmente, el proyecto cuenta con un catálogo funcional de productos consumidos desde una API, filtro por categoría, sistema de favoritos, gestión de estado con Vuex, pruebas unitarias y una prueba e2e, además de mejoras visuales mediante Vuetify.

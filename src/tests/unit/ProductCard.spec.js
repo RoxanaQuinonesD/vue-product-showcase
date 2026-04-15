@@ -1,3 +1,5 @@
+/* eslint-env jest */
+
 import { mount } from "@vue/test-utils"
 import ProductCard from "../../components/ProductCard.vue"
 
